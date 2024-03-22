@@ -16,7 +16,7 @@ import shutil
 from tkinter.filedialog import askopenfilename
 from tkinter.filedialog import askopenfilenames
 import warnings
-import cirpy
+#import cirpy
 
 warnings.simplefilter(action='ignore')
 initialdir=os.getcwd()
@@ -138,7 +138,7 @@ def main1():
         print('No < in Conc 1 Mean Op (Standardized)')
         #continue
     ct2=pd.concat([eq,ap,gtc,ltc],axis=0)
-    ct2['Smiles']=ct2.apply(lambda x:castosmi(str(x['CAS Number'])), axis=1)
+    #ct2['Smiles']=ct2.apply(lambda x:castosmi(str(x['CAS Number'])), axis=1)
     #ct2.shape
     ct2.to_csv('FirstFile_forChecking.csv', index=False)
 
